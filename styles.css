@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f7ff;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* CARD */
+.todo-card {
+  background: #fff;
+  max-width: 420px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* TOP */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TITLE */
+h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+/* DESCRIPTION */
+p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* COLLAPSE */
+.collapsed {
+  max-height: 50px;
+  overflow: hidden;
+}
+
+#expandBtn {
+  margin: 8px 0;
+  background: none;
+  border: none;
+  color: #6c63ff;
+  cursor: pointer;
+}
+
+/* META */
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+
+/* PRIORITY */
+#priorityIndicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.high { background: #ff4d4d; }
+.medium { background: #ffa500; }
+.low { background: #2ecc71; }
+
+/* STATUS */
+select {
+  padding: 5px;
+  border-radius: 6px;
+}
+
+/* TIME */
+#timeRemaining {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.overdue {
+  color: red;
+  font-weight: bold;
+}
+
+/* TAGS */
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+  list-style: none;
+}
+
+.tags li {
+  background: #eee;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* BUTTONS */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #6c63ff;
+  color: #fff;
+}
+
+button:last-child {
+  background: #ff4d4d;
+}
+
+/* COMPLETED */
+.completed h2 {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* EDIT FORM */
+.hidden {
+  display: none;
+}
+
+form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input, textarea, select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
